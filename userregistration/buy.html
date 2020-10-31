@@ -1,0 +1,151 @@
+<?php
+
+session_start();
+if(!isset($_SESSION['username'])){
+    header('location: login.php');
+}
+
+?>
+<html lang="en">
+<head>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: #f5f5f5;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.header {
+    padding: 80px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+    height: 50%;
+    width: 100%;
+    background-image: url(doctor.jpeg);
+    width: 1400px;
+    height: 290px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.header h1 {
+  font-size: 40px;
+}
+
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+
+
+.navbar a.right {
+  float: right;
+}
+
+
+.navbar a:hover {
+  background-color: #51CCBF;
+  color: black;
+}
+
+
+.navbar a.active {
+  background-color: #51CCBF;
+  color: white;
+}
+
+
+.images {
+    
+    background: #1abc9c;
+    color: white;
+}
+
+
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+ </div>
+
+<div class="navbar">
+  <a href="home.php"><i class="fa fa-fw fa-home"></i>Home</a>
+  <a href="http://localhost/PHP-Doctor-Appointment-System/"><i class="fa fa-fw fa-calendar"></i>Book a Doc</a>
+  <a href="buy.html" class="active"><i class="fa fa-fw fa-cart-plus"></i>Buy</a>
+  <a href="findmydoc.html"><i class="fa fa-fw fa-search"></i>Find My Doc</a>
+  <a href="index.html"><i class="fa fa-fw fa-comments"></i>Chat</a>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSfptMhzWme7tcgyRwp7sqI_eCH_Xg7CWpeSjxA371t_7ZZCjg/viewform?usp=sf_link"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+  <a href="https://meet.google.com/zwp-spvy-xzv"><i class="fa fa-fw fa-video-camera"></i>Meet</a>
+
+  <a href="logout.php" class="right"><i class="fa fa-fw fa-user"></i>Logout</a>
+</div>
+
+<div class="images">
+    <a href="https://www.1mg.com/">
+        <img src="g.png" style="padding:30px 50px;float:left;width:33.3%;height:40%;">
+      </a>
+      <a href="https://www.netmeds.com/">
+        <img src="h.jpg" style="padding:30px 50px;float:right;width:33.3%;height:40%;">
+      </a>
+      <a href="https://www.medlife.com/express/page/home">
+        <img src="k.png" style="padding:30px 30px;float:left;width:33.3%;height:40%;">
+      </a>
+      <a href="https://pharmeasy.in/">
+        <img src="j.png" style="padding:30px 30px;float:left;width:33.3%;height:40%;">
+      </a>
+      <a href="https://www.medplusmart.com/">
+        <img src="l.png" style="padding:30px 30px;float:left;width:33.3%;height:40%;">
+      </a>
+      <a href="https://www.apollopharmacy.in/">
+        <img src="sr.jpg" style="padding:30px 30px;float:left;width:33.3%;height:40%;">
+      </a>
+      <img src="footer.jpg" style="float:left;width:100%;height:12%;">
+</div>
+
+
+</body>
+</html>
